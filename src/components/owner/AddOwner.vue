@@ -44,7 +44,7 @@
                 'insertData'
             ]),
             addOwner() {
-                if(this.fname == '' && this.lname == '' && this.age == '') {
+                if(this.fname == '' || this.lname == '' || this.age == '') {
                     this.setWarning('Please Complete the fields!');
                 } else {
                     const data = {
@@ -53,6 +53,9 @@
                         age: this.age
                     }
                     this.insertData(data);
+                    this.fname = ''
+                    this.lname = ''
+                     this.age = ''
                 }
             },
             setWarning(message) {

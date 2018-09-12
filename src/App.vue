@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <app-alert></app-alert>
     <app-header></app-header>
     <div class="container">
       <transition name="slide" type="animation" appear mode="out-in">
@@ -11,6 +12,7 @@
 
 <script>
 import appHeader from './components/Header.vue'
+import appAlert from './components/Alert.vue'
 export default {
   data () {
     return {
@@ -18,14 +20,14 @@ export default {
     }
   },
   components: {
-    appHeader
+    appHeader,
+    appAlert
   }
 
 }
 </script>
 
 <style lang="scss">
-
 // ANIMATIONS
 .slide {
   &-enter {

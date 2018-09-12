@@ -37,7 +37,7 @@ export default {
     data() {
         return {
             page: 1,
-            pageQty: 10,
+            pageQty: 4,
             search: ''
         }
     },
@@ -55,7 +55,8 @@ export default {
             return this.maxRange - (this.pageQty -1);
         },
         pagination() {
-            return Math.floor(this.ownerTotal/this.pageQty) + 1;
+            var val = this.ownerTotal/this.pageQty;
+            return  val % 1 == 0 ? val : Math.floor(val) + 1;
         },
         filteredOwner() {
             return this.owners.filter((item, index) => {
