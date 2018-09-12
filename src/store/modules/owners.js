@@ -5,17 +5,23 @@ const state = {
 }
 
 const mutations = {
-    'SET_STOCKS' (state, data) {
+    'SET_OWNERS' (state, data) {
         state.owners = data;
     }
 }
 
 const actions = {
     loadData: ({ commit }) => {
-        axios.get('http://localhost:3000/')
+        axios.get('http://localhost:3000/owner')
             .then(res => {
-                commit('SET_STOCKS', res.data);
+                commit('SET_OWNERS', res.data);
             });
+    },
+    insertData: ({ commit }, data) => {
+        axios.post('http://localhost:3000/owner', data)
+            .then((res) => {
+                commit('SET_OWNERS', res.data);
+            })
     }
 }
 

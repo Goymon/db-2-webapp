@@ -11,8 +11,8 @@
                     <router-link tag="li" to="/" class="nav-item" active-class="active" exact>
                         <a class="nav-link">Home</a>
                     </router-link>
-                    <router-link tag="li" to="/Owners" class="nav-item" active-class="active">
-                        <a class="nav-link">Owners</a>
+                    <router-link tag="li" to="/Owner" class="nav-item" active-class="active">
+                        <a class="nav-link">Owner</a>
                     </router-link>
                 </ul>
             </div>

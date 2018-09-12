@@ -1,10 +1,11 @@
 import Home from './components/Home.vue';
-import Owners from './components/Owners.vue';
+import Owner from './components/owner/Owner.vue';
 
 export const routes = [{
     path: '/',
     component: Home
 }, {
-    path: '/owners',
-    component: Owners
+    path: '/owner',
+    component: Owner,
+
 }]
