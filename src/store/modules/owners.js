@@ -44,7 +44,7 @@ const actions = {
                 commit('SET_OWNERS', res.data);
             }).catch(err => {
                 const data = {
-                    message: `Somthing went wrong please try again later.`,
+                    message: `Something went wrong please try again later.`,
                     alertType: 'error'
                 }
                 commit('SET_ALERT', data);
